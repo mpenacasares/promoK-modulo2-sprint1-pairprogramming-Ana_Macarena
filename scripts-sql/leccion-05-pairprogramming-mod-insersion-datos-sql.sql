@@ -62,10 +62,14 @@ INSERT INTO clientes (nombre, numero_telefono, email, direccion, ciudad, provinc
 	('Monica', '1234567289', 'monica@email.com', 'Calle Felicidad', 'Móstoles', 'Madrid', '28176'),
 	('Lorena', '289345678', 'lorena@email.com', 'Calle Alegria', 'Barcelona', 'Barcelona', '12346'),
 	('Carmen', '298463759', 'carmen@email.com', 'Calle del Color', 'Vigo', 'Pontevedra', '23456');
+    
+INSERT INTO clientes (nombre, numero_telefono, email, direccion, ciudad, provincia, codigo_postal)
+VALUES
+('Maca', '12345abcde', 'maca@email.com', 'Calle Patata', 'Móstoles', 'Madrid', '28177');
 
 SELECT * FROM facturas;
 
-    -- duda: numero factura como INT o varchar
+    -- duda: numero factura como INT o varchar - si es num factura es mejor int, pondriamos varchar si tiene que entrar letra
 INSERT INTO facturas (numero_factura, fecha, id_zapatilla_facturas, id_empleado_facturas, id_cliente_facturas, total)
 	VALUES
 	(123, '2001-12-11', 1, 2, 1, 54.98),
@@ -91,8 +95,8 @@ INSERT INTO facturas (numero_factura, fecha, id_zapatilla_facturas, id_empleado_
 	WHERE id_cliente = 1; 
     
     -- Hacemos delete porque se nos han duplicado los valores
-    DELETE FROM clientes
-	WHERE id_cliente > 3;
+--     DELETE FROM clientes
+-- 	WHERE id_cliente > 3;
     
 	SELECT * FROM facturas;
 
@@ -105,9 +109,9 @@ INSERT INTO facturas (numero_factura, fecha, id_zapatilla_facturas, id_empleado_
 	ALTER TABLE facturas
 	AUTO_INCREMENT = 1;
     
-    DELETE FROM facturas
-	WHERE id_factura > 12;
-    
+    -- DELETE FROM facturas
+-- 	WHERE id_factura > 12;
+--     
     
 /*
 Ejercicio leccion 04
